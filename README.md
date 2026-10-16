@@ -8,7 +8,7 @@
 
 ```bash
 cd ~
-git clone https://github.com/<教师账号>/cloud-app-dev-2026.git
+git clone https://github.com/tonghao/cloud-app-dev-2026.git
 ```
 
 **只用 https 开头的地址。**页面上 `git@github.com:` 开头的是 SSH 地址，需要账号和密钥，用不了。
