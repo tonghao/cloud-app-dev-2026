@@ -12,6 +12,9 @@
 | `S1a-最小应用` | 第4讲第一段 | 首页 `/` 返回「书签列表」 | `app.py` |
 | `S1b-添加与编辑` | 第4讲第二段 | 加上 `/add`、`/edit/<int:bookmark_id>`，各分 GET、POST | `app.py` |
 | `S1-路由骨架` | 第4讲结束 | 五条路由齐全，含 `/delete`、`/health`；留出「拓展写在这里」 | `app.py`、`requirements.txt`、`docs/接口表.md` |
+| `S2a-数据进入页面` | 第5讲第二段 | 首页用模板渲染：预设三条书签交给 `index.html`，for 循环输出，`length` 显示条数 | `app.py`、`templates/`、`static/` |
+| `S2b-模板继承` | 第5讲第三段 | 页头和导航移到 `base.html`，`index.html` 继承它 | `app.py`、`templates/`、`static/` |
+| `S2-列表页` | 第5讲结束 | 模板里的链接和样式表地址全部改用 `url_for` | `app.py`、`templates/`、`static/`、`requirements.txt`、`docs/接口表.md` |
 
 后面的阶段随课程进度逐讲加入。
 

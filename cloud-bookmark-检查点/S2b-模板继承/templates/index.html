@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}书签列表{% endblock %}
+{% block content %}
+    <ul>
+        {% for bm in bookmarks %}
+        <li>
+            <a href="{{ bm.url }}" target="_blank">{{ bm.title }}</a>
+            <a href="/edit/{{ bm.id }}">编辑</a>
+            <form method="post" action="/delete/{{ bm.id }}" style="display:inline">
+                <button>删除</button>
+            </form>
+        </li>
+        {% else %}
+        <li>还没有书签，<a href="/add">添加第一个</a>吧！</li>
+        {% endfor %}
+    </ul>
+    <p>共 {{ bookmarks|length }} 条书签</p>
+{% endblock %}

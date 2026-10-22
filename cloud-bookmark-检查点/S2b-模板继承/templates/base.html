@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}云书签{% endblock %}</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <h1>云书签</h1>
+    <nav>
+        <a href="/">首页</a> |
+        <a href="/add">添加书签</a>
+    </nav>
+    {% block content %}{% endblock %}
+</body>
+</html>
