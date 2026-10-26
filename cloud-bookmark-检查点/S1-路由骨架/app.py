@@ -6,7 +6,7 @@
     第5讲　index 换成模板页面
     第6讲　add_bookmark、edit_bookmark 实现验证、保存、回填
     第7讲　delete_bookmark 真正删除
-应看到：curl -i http://127.0.0.1:5000/delete/1 得到 405，响应头有 Allow: POST, OPTIONS；
+应看到：curl -i http://127.0.0.1:5000/delete/1 得到 405，响应头 Allow 里有 POST 和 OPTIONS（先后顺序不固定）；
        curl -i http://127.0.0.1:5000/health 得到 200，Content-Type 为 application/json。
 跟丢了：把本文件复制成 ~/work/cloud-bookmark/app.py，再做本讲的拓展。
 
