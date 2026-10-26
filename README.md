@@ -18,11 +18,13 @@
 
 ```bash
 cd ~
-git clone https://github.com/tonghao/cloud-app-dev-2026.git
+git clone https://gitee.com/tong-hao/cloud-app-dev-2026.git
 ```
 
-**只用 https 开头的地址。**页面上 `git@github.com:` 开头的是 SSH 地址，需要账号和密钥，用不了。
-网络不通时，班群里每讲都有同样内容的压缩包。
+Gitee 访问不了时，改用 GitHub 上的同一仓库，内容相同：`git clone https://github.com/tonghao/cloud-app-dev-2026.git`。
+
+**只用 https 开头的地址。**页面上 `git@gitee.com:`、`git@github.com:` 开头的是 SSH 地址，需要账号和密钥，用不了。
+两处都不通时，班群里每讲都有同样内容的压缩包。
 
 ## 每讲课前
 
