@@ -15,6 +15,9 @@
 | `S2a-数据进入页面` | 第5讲第二段 | 首页用模板渲染：预设三条书签交给 `index.html`，for 循环输出，`length` 显示条数 | `app.py`、`templates/`、`static/` |
 | `S2b-模板继承` | 第5讲第三段 | 页头和导航移到 `base.html`，`index.html` 继承它 | `app.py`、`templates/`、`static/` |
 | `S2-列表页` | 第5讲结束 | 模板里的链接和样式表地址全部改用 `url_for` | `app.py`、`templates/`、`static/`、`requirements.txt`、`docs/接口表.md` |
+| `S3a-接收表单` | 第6讲第一段 | 添加表单提交后，视图函数按 name 取值、存进列表 | `app.py`、`templates/`、`static/` |
+| `S3b-重定向与提示` | 第6讲第二段 | 添加成功后 flash 提示、重定向回首页，按 F5 不重复提交；`base.html` 加消息显示区 | `app.py`、`templates/`、`static/` |
+| `S3-添加书签` | 第6讲结束 | `validators.py` 服务端验证，失败留在表单并回填 | `app.py`、`validators.py`、`templates/`、`static/`、`requirements.txt`、`docs/接口表.md` |
 
 后面的阶段随课程进度逐讲加入。
 
