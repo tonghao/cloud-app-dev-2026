@@ -18,6 +18,10 @@
 | `S3a-接收表单` | 第6讲第一段 | 添加表单提交后，视图函数按 name 取值、存进列表 | `app.py`、`templates/`、`static/` |
 | `S3b-重定向与提示` | 第6讲第二段 | 添加成功后 flash 提示、重定向回首页，按 F5 不重复提交；`base.html` 加消息显示区 | `app.py`、`templates/`、`static/` |
 | `S3-添加书签` | 第6讲结束 | `validators.py` 服务端验证，失败留在表单并回填 | `app.py`、`validators.py`、`templates/`、`static/`、`requirements.txt`、`docs/接口表.md` |
+| `S4a-编辑与删除` | 第7讲第一段 | 编辑页回填并保存，删除用 POST | `app.py`、`validators.py`、`templates/`、`static/` |
+| `S4-第2章完成版` | 第7讲结束 | 密钥改读环境变量，加两个自动化测试；第2章到此结束 | `app.py`、`validators.py`、`templates/`、`static/`、`requirements.txt`、`pytest.ini`、`docs/接口表.md`、`tests/` |
+| `S5a-第三段起点` | 第8讲第三段 | 第3章的新前端：`static/index.html` 与起点样式表 `static/style.css`，两栏、卡片、表单三处样式待补 | 同 S4，另加 `static/index.html`、`static/style.css` |
+| `S5b-页面样式` | 第8讲结束 | 补完两栏、卡片、表单三处样式；第9讲从这里接着写 JavaScript | 同 S5a |
 
 后面的阶段随课程进度逐讲加入。
 

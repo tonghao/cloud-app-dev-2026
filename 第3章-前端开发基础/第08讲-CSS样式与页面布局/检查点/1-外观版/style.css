@@ -1,0 +1,71 @@
+/* 棕熊页的样式（第8讲检查点 1-外观版：第一段做完）
+   按本讲四块的顺序写：一、二块是第一段（检查点 1-外观版），三、四块是第二段。同一个选择器可以在几块里各写一条，
+   浏览器会把它们合起来（例如 body 在一、二、三块各有一条）。 */
+
+/* ══ 一　规则与选择器：这一块只改颜色，看清每条规则选中了谁 ══ */
+
+/* 元素选择器 */
+body {
+    color: #3e2723;
+    background-color: #f3ede4;
+}
+
+/* 分组：一条规则管 h1 和 h2 */
+h1, h2 {
+    color: #6d4c41;
+}
+
+header {
+    background-color: #6d4c41;
+}
+
+/* 后代：只管页头里的 h1。它和 h1, h2 都管 h1 的颜色，它更具体，白色赢 */
+header h1 {
+    color: white;
+}
+
+/* 类：三个 section 共用 class="card"，写一次管三块 */
+.card {
+    background-color: white;
+}
+
+/* id：一页只有一个 #media。它和 .card 都设了背景，id 更具体，浅棕赢 */
+#media {
+    background-color: #efebe9;
+}
+
+strong {
+    color: #2e7d32;
+}
+
+/* ══ 二　文字与颜色 ══ */
+
+body {
+    font-family: "Microsoft YaHei", Arial, sans-serif;
+    line-height: 1.7;            /* 颜色、字体、行高会传给里面的 p、li */
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+/* 链接不跟着 body 变色：浏览器给了它默认的蓝色，要单独写 */
+a {
+    color: #bf360c;
+}
+
+/* 伪类：鼠标停在链接上时去掉下划线 */
+a:hover {
+    text-decoration: none;
+}
+
+/* 导航里的链接：nav a 比 a 更具体，白色赢 */
+nav a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}

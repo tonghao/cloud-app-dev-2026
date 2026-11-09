@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>云书签</title>
+    <!-- 样式表与本页在同一目录：static/style.css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>云书签</h1>
+        <p class="info">共有 <span id="bookmark-count">3</span> 个书签</p>
+    </header>
+
+    <main>
+        <!-- 书签列表：三张卡片先写死，第9讲改由 JavaScript 生成 -->
+        <section class="bookmarks-section">
+            <h2>我的书签</h2>
+            <div id="bookmarks-container">
+                <div class="bookmark-card">
+                    <h3><a href="https://flask.palletsprojects.com/" target="_blank">Flask 官方文档</a></h3>
+                    <div class="url">https://flask.palletsprojects.com/</div>
+                    <div class="actions">
+                        <button class="btn-edit">编辑</button>
+                        <button class="btn-delete">删除</button>
+                    </div>
+                </div>
+                <div class="bookmark-card">
+                    <h3><a href="https://jinja.palletsprojects.com/" target="_blank">Jinja2 模板文档</a></h3>
+                    <div class="url">https://jinja.palletsprojects.com/</div>
+                    <div class="actions">
+                        <button class="btn-edit">编辑</button>
+                        <button class="btn-delete">删除</button>
+                    </div>
+                </div>
+                <div class="bookmark-card">
+                    <h3><a href="https://developer.aliyun.com/" target="_blank">阿里云开发者社区</a></h3>
+                    <div class="url">https://developer.aliyun.com/</div>
+                    <div class="actions">
+                        <button class="btn-edit">编辑</button>
+                        <button class="btn-delete">删除</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 添加表单：本讲只管样子，提交在第9、10讲接上 -->
+        <section class="form-section">
+            <h2>添加书签</h2>
+            <form id="bookmark-form">
+                <div class="form-group">
+                    <label for="title">标题</label>
+                    <input type="text" id="title" name="title" required placeholder="请输入书签标题">
+                </div>
+                <div class="form-group">
+                    <label for="url">URL</label>
+                    <input type="url" id="url" name="url" required placeholder="https://example.com">
+                </div>
+                <div class="form-actions">
+                    <button type="submit" id="submit-btn">添加书签</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

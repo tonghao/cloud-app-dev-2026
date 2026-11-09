@@ -1,0 +1,163 @@
+/* 棕熊页的样式（第8讲检查点 2-完成版：第二段做完）
+   按本讲四块的顺序写：一、二块是第一段（检查点 1-外观版），三、四块是第二段。同一个选择器可以在几块里各写一条，
+   浏览器会把它们合起来（例如 body 在一、二、三块各有一条）。 */
+
+/* ══ 一　规则与选择器：这一块只改颜色，看清每条规则选中了谁 ══ */
+
+/* 元素选择器 */
+body {
+    color: #3e2723;
+    background-color: #f3ede4;
+}
+
+/* 分组：一条规则管 h1 和 h2 */
+h1, h2 {
+    color: #6d4c41;
+}
+
+header {
+    background-color: #6d4c41;
+}
+
+/* 后代：只管页头里的 h1。它和 h1, h2 都管 h1 的颜色，它更具体，白色赢 */
+header h1 {
+    color: white;
+}
+
+/* 类：三个 section 共用 class="card"，写一次管三块 */
+.card {
+    background-color: white;
+}
+
+/* id：一页只有一个 #media。它和 .card 都设了背景，id 更具体，浅棕赢 */
+#media {
+    background-color: #efebe9;
+}
+
+strong {
+    color: #2e7d32;
+}
+
+/* ══ 二　文字与颜色 ══ */
+
+body {
+    font-family: "Microsoft YaHei", Arial, sans-serif;
+    line-height: 1.7;            /* 颜色、字体、行高会传给里面的 p、li */
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+/* 链接不跟着 body 变色：浏览器给了它默认的蓝色，要单独写 */
+a {
+    color: #bf360c;
+}
+
+/* 伪类：鼠标停在链接上时去掉下划线 */
+a:hover {
+    text-decoration: none;
+}
+
+/* 导航里的链接：nav a 比 a 更具体，白色赢 */
+nav a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* ══ 三　盒模型 ══ */
+
+/* 所有元素的 width 都算到边框为止（固定写法，放最前也行） */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;                   /* 去掉浏览器默认的 8px 外边距 */
+    padding: 20px;
+}
+
+/* 页头和主区一样宽，左右外边距 auto：居中 */
+header, main {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.card {
+    padding: 10px 30px 20px;     /* 内边距：上 10、左右 30、下 20 */
+    margin-bottom: 20px;         /* 外边距：卡片之间的间隔 */
+    border-left: 6px solid #8d6e63;
+    border-radius: 8px;
+}
+
+.card h2 {
+    border-bottom: 1px solid #d7ccc8;
+    padding-bottom: 6px;
+}
+
+/* ══ 四　display 与 Flex ══ */
+
+/* 导航排成一行：flex 写在容器 ul 上，管它的直接子元素 li */
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;            /* 去掉圆点 */
+    margin: 0;
+    padding: 0;
+}
+
+/* a 是内联元素，改成块级后，padding 撑开的整块都能点 */
+nav a {
+    display: block;
+    padding: 4px 12px;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    background-color: #8d6e63;
+}
+
+/* 物种列表排成一行标签 */
+.species {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+}
+
+.species li {
+    background-color: #efebe9;
+    padding: 2px 14px;
+    border-radius: 14px;
+}
+
+/* 照片与视频并排，各分一半 */
+.gallery {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;     /* 不写则默认拉伸：矮的那个被拉得和高的一样高 */
+}
+
+.gallery img,
+.gallery video {
+    flex: 1;                     /* 两个都写 flex: 1：间隔先占位，剩下的平分 */
+    height: auto;
+    border-radius: 6px;
+}

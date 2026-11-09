@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, "Microsoft YaHei", sans-serif;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    color: #333;
+}
+
+h1 a { color: #333; text-decoration: none; }
+nav { margin-bottom: 1em; color: #888; }
+a { color: #0066cc; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+ul { list-style: none; padding: 0; }
+li { padding: 8px 0; border-bottom: 1px solid #eee; }
+
+button {
+    padding: 4px 12px;
+    cursor: pointer;
+}
+
+.flash { padding: 8px 12px; border-radius: 4px; margin: 6px 0; }
+.flash-success { background: #e6f4ea; color: #1e7e34; }
+.flash-error   { background: #fdecea; color: #c0392b; }
+.flash-warning { background: #fff4e5; color: #b9770e; }

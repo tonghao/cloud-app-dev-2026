@@ -1,0 +1,155 @@
+/* 云书签的样式（第8讲第三段补完两栏、卡片、表单三处即为此版；第9讲起不再改动） */
+
+/* 所有元素的 width 都算到边框为止 */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Microsoft YaHei", Arial, sans-serif;
+    color: #333;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+}
+
+/* 页头 */
+header {
+    background-color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+header h1 {
+    color: #2c3e50;
+    margin: 0 0 10px;
+}
+
+header .info {
+    color: #7f8c8d;
+    font-size: 14px;
+    margin: 0;
+}
+
+#bookmark-count {
+    color: #3498db;
+    font-weight: bold;
+}
+
+/* 主区：列表与表单左右两栏，按 2:1 分 */
+main {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;   /* 不写则表单被拉得和列表一样高 */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 两个区域：分组选择器，一条规则管两种元素 */
+.bookmarks-section, .form-section {
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+}
+
+.bookmarks-section {
+    flex: 2;
+}
+
+.form-section {
+    flex: 1;
+}
+
+h2 {
+    color: #2c3e50;
+    font-size: 20px;
+    margin: 0 0 20px;
+}
+
+/* 书签卡片 */
+.bookmark-card {
+    background-color: #f8f9fa;
+    border-left: 4px solid #3498db;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.bookmark-card h3 {
+    font-size: 18px;
+    margin: 0 0 8px;
+}
+
+/* 卡片标题链接：链接有浏览器默认的蓝色，不继承 body 的颜色，要单独写 */
+.bookmark-card h3 a {
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+.bookmark-card h3 a:hover {
+    color: #3498db;
+}
+
+.bookmark-card .url {
+    color: #7f8c8d;
+    font-size: 14px;
+    margin-bottom: 10px;
+    word-break: break-all;     /* 长网址到边就折行 */
+}
+
+/* 编辑、删除两个按钮排成一行 */
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.actions > button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn-edit {
+    background-color: #f39c12;
+}
+
+.btn-delete {
+    background-color: #e74c3c;
+}
+
+/* 表单 */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;            /* label 默认是内联元素，改成独占一行 */
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #dfe6e9;
+    border-radius: 4px;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+#submit-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #27ae60;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
