@@ -134,20 +134,6 @@ nav a:hover {
     background-color: #8d6e63;
 }
 
-/* 物种列表排成一行标签 */
-.species {
-    display: flex;
-    gap: 10px;
-    list-style: none;
-    padding: 0;
-}
-
-.species li {
-    background-color: #efebe9;
-    padding: 2px 14px;
-    border-radius: 14px;
-}
-
 /* 照片与视频并排，各分一半 */
 .gallery {
     display: flex;
