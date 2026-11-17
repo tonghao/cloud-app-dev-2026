@@ -21,7 +21,10 @@
 | `S4a-编辑与删除` | 第7讲第一段 | 编辑页回填并保存，删除用 POST | `app.py`、`validators.py`、`templates/`、`static/` |
 | `S4-第2章完成版` | 第7讲结束 | 密钥改读环境变量，加两个自动化测试；第2章到此结束 | `app.py`、`validators.py`、`templates/`、`static/`、`requirements.txt`、`pytest.ini`、`docs/接口表.md`、`tests/` |
 | `S5a-第三段起点` | 第8讲第三段 | 第3章的新前端：`static/index.html` 与起点样式表 `static/style.css`，两栏、卡片、表单三处样式待补 | 同 S4，另加 `static/index.html`、`static/style.css` |
-| `S5b-页面样式` | 第8讲结束 | 补完两栏、卡片、表单三处样式；第9讲从这里接着写 JavaScript | 同 S5a |
+| `S5b-页面样式` | 第8讲结束 | 补完两栏、卡片、表单三处样式；第9讲从这里换成数据库，第12讲接着写 JavaScript | 同 S5a |
+| `S9a-执行SQL` | 第9讲第一段 | 在云书签里新建 `sql_demo.py`，用 `sqlite3` 建表、插入、查询，比较拼接与占位符；`app.py` 不动 | 同 S5b，另加 `sql_demo.py` |
+| `S9b-列表换成数据库` | 第9讲第二段 | `app.py` 的内存列表换成 Flask-SQLAlchemy 的模型，数据存进 SQLite，地址读环境变量；测试改用内存库，两个测试重新通过 | `app.py`、`requirements.txt`、`tests/`（其余同 S9a） |
+| `S9-连接MySQL` | 第11周第1次实践课（第9讲第三段） | 代码不改，Docker 里起 MySQL、设 `DATABASE_URL` 就换了数据库；加 MySQL 驱动 | `requirements.txt`（其余同 S9b） |
 
 后面的阶段随课程进度逐讲加入。
 
