@@ -25,6 +25,9 @@
 | `S9a-执行SQL` | 第9讲第一段 | 在云书签里新建 `sql_demo.py`，用 `sqlite3` 建表、插入、查询，比较拼接与占位符；`app.py` 不动 | 同 S5b，另加 `sql_demo.py` |
 | `S9b-列表换成数据库` | 第9讲第二段 | `app.py` 的内存列表换成 Flask-SQLAlchemy 的模型，数据存进 SQLite，地址读环境变量；测试改用内存库，两个测试重新通过 | `app.py`、`requirements.txt`、`tests/`（其余同 S9a） |
 | `S9-连接MySQL` | 第11周第1次实践课（第9讲第三段） | 代码不改，Docker 里起 MySQL、设 `DATABASE_URL` 就换了数据库；加 MySQL 驱动 | `requirements.txt`（其余同 S9b） |
+| `S10a-JSON列表接口` | 第10讲第一段 | 模型加 `to_dict`，`GET /api/bookmarks` 返回书签列表的 JSON，中文不转义 | `app.py`（其余同 S9） |
+| `S10b-增删查改接口` | 第10讲第二段 | 查看一条、创建、修改、删除四个 JSON 接口（只写成功路径），列表支持 `?q=` 按标题查询；接口表加「JSON 接口」一节 | `app.py`、`docs/接口表.md`（其余同 S10a） |
+| `S10-错误响应` | 第10讲结束 | 找不到返回 404，请求体不是 JSON 或验证失败返回 400，错误统一为 `{"error", "details"}`；接口表补「失败时」一列 | `app.py`、`docs/接口表.md`（其余同 S10b） |
 
 后面的阶段随课程进度逐讲加入。
 
