@@ -60,6 +60,7 @@ class User(db.Model):
     __tablename__ = 'users'
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(50), unique=True, nullable=False)
+    password_hash = db.Column(db.String(255), nullable=False)      # 只存哈希，不存明文
     bookmarks = db.relationship('Bookmark', backref='user')        # 一个用户的全部书签
 
 class Bookmark(db.Model):
@@ -75,7 +76,7 @@ class Bookmark(db.Model):
 | 连接查询 | `db.session.query(Bookmark.title, User.username).join(User).all()` | 11 演示 |
 | 每个用户的书签数 | `db.session.query(User.username, db.func.count(Bookmark.id)).join(Bookmark).group_by(User.id).all()` | 11 演示 |
 
-关系导航每访问一次就发一条查询。在循环里逐条访问 `bm.user` 会产生 1 + N 条查询（N+1 问题），数据多时改用连接查询。
+关系导航每访问一次就发一条查询。在循环里逐条访问 `bm.user` 最多产生 1 + N 条查询（N 为不同用户数，即 N+1 问题），数据多时改用连接查询。
 
 ## 五、常见错误
 

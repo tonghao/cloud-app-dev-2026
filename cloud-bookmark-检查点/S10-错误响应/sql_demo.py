@@ -39,6 +39,11 @@ conn.commit()                              # 写操作提交后才保存到文�
 for row in cur.execute('SELECT id, title, url FROM bookmarks'):
     print(row)
 
+# 转换：模板要的是字典列表，元组按列的顺序取值，要自己写
+rows = cur.execute('SELECT id, title, url FROM bookmarks').fetchall()
+bookmarks = [{'id': r[0], 'title': r[1], 'url': r[2]} for r in rows]
+print('字典：', bookmarks[0])
+
 # 对比：用户输入的「标题」里藏着一段 SQL
 keyword = "' OR '1'='1"
 spliced = cur.execute(f"SELECT title FROM bookmarks WHERE title = '{keyword}'").fetchall()
